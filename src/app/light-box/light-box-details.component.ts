@@ -45,7 +45,6 @@ export class LightBoxDetailsComponent implements OnInit {
   ngOnInit() {
     this.lightBox.getPhotoDetailsStream()
       .subscribe( ( photoDetails:IPhotoListElementDetails ) => {
-        console.log(photoDetails);
         this.photoDetails = photoDetails;
       })
   }
