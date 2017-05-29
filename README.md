@@ -7,6 +7,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 From main folder open console and type:
 
+    npm install
+
+and next
+
     npm start
 
 Now you should find working app at `http://localhost:4200/`. 
