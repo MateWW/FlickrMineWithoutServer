@@ -2,15 +2,14 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
 
-## Modules
+## Start project
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+From main folder open console and type:
 
-## Code scaffolding
+    npm start
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
+Now you should find working app at `http://localhost:4200/`. 
 
 ## Build
 
@@ -23,20 +22,3 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-
-## Server Docummentation
-
-`/api/search/` 
- -  Method : `POST`
- -  Parameters : `searchtext`
- -  Return : `JSON Object`
-
-`/api/photoinfo/`
- - Method : `POST`
- - Parameteres : `photoId`
- - Return : `JSON Object` - photo details
- 
-`/api/photolinks/`
- - Method : `POST`
- - Parameteres : `photoId`
- - Return : `JSON Object` - photo links with sizes
