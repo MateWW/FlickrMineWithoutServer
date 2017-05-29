@@ -43,7 +43,6 @@ export class LightBoxService {
   private setPhotoDetails( photoElement:IPhotoListElement ){
     this.communication.getPhotoDetails( photoElement )
       .subscribe(( photoDetails:IPhotoListElementDetails )=>{
-
           if( photoDetails.id == 0 || photoDetails.secret.length == 0 )
             return ;
           

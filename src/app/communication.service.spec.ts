@@ -46,13 +46,13 @@ describe('CommunicationService', () => {
   it('should return photo details', async(inject([CommunicationService], (service: CommunicationService) => {
     service.getPhotoDetails(element)
       .subscribe(( photoDetails:IPhotoListElementDetails ) => {
+        console.log(photoDetails);
         expect(photoDetails.id).toBeDefined();
       })
   })));
 
   it('should return photo urls', async(inject([CommunicationService], (service: CommunicationService) => {
-    let url = service.getPhotoUrl(element);
-    
+    let url = service.getPhotoUrl(element);    
     expect(url.id).toBeDefined();
     expect( typeof url.orginalUrl ).toBe( 'string' );
     expect( typeof url.thumbnailUrl ).toBe( 'string' );

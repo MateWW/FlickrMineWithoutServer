@@ -9,6 +9,8 @@ import { GetPhotoList } from './get-photos-list';
 export class RequestMaker {
   private http:Http;
 
+  private key = "9f2d31e455853102e0f43c396e887450";
+
   private PhotosUrl:GetPhotoUrl;
   private PhotosDetails:GetPhotosDetails;
   private PhotosList:GetPhotoList;
@@ -16,8 +18,8 @@ export class RequestMaker {
   constructor( http: Http ) {
     this.http = http;
     this.PhotosUrl = new GetPhotoUrl();
-    this.PhotosDetails = new GetPhotosDetails(http);
-    this.PhotosList = new GetPhotoList(http);
+    this.PhotosDetails = new GetPhotosDetails( http, this.key );
+    this.PhotosList = new GetPhotoList(http, this.key );
   }
 
   getPhotosList( text:string ){
@@ -31,7 +33,7 @@ export class RequestMaker {
 
 
   getPhotoDetails( photo:IPhotoListElement ){
-    return this.PhotosDetails.getDetails( photo.id , photo.secret );
+    return this.PhotosDetails.getDetails( photo.id, photo.secret );
   }
 
   
